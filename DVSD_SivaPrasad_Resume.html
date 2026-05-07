@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DVSD Siva Prasad - Senior Cloud Engineer | .NET & Azure Developer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+  @page { margin: 0.5in 0.6in; size: A4; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Source Sans Pro', Calibri, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #2c2c2c;
+    max-width: 8.27in;
+    margin: 0 auto;
+    padding: 0.5in 0.6in;
+    background: #fff;
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2.5px solid #1a3c6e;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 25%;
+    width: 50%;
+    height: 2.5px;
+    background: #c0932e;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 26pt;
+    color: #1a3c6e;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .header .title {
+    font-size: 11.5pt;
+    color: #555;
+    margin-bottom: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .header .contact {
+    font-size: 10pt;
+    color: #444;
+  }
+  .header .contact span { margin: 0 8px; }
+  .header .contact .sep { color: #c0932e; font-weight: bold; font-size: 11pt; }
+
+  /* ── Sections ── */
+  .section { margin-bottom: 16px; }
+  .section-title {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 12.5pt;
+    font-weight: 700;
+    color: #1a3c6e;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid #1a3c6e;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  /* ── Summary ── */
+  .summary {
+    font-size: 10.5pt;
+    color: #3a3a3a;
+    text-align: justify;
+    line-height: 1.55;
+  }
+
+  /* ── Skills ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 24px;
+  }
+  .skill-row { display: flex; width: 100%; margin-bottom: 3px; }
+  .skill-label {
+    font-weight: 700;
+    color: #1a3c6e;
+    min-width: 170px;
+    font-size: 10.5pt;
+  }
+  .skill-value { font-size: 10.5pt; color: #3a3a3a; }
+
+  /* ── Certifications ── */
+  .cert-list { padding-left: 18px; margin-top: 3px; }
+  .cert-list li {
+    font-size: 10.5pt;
+    color: #3a3a3a;
+    margin-bottom: 3px;
+  }
+  .cert-list li::marker { color: #c0932e; }
+  .cert-badge {
+    display: inline-block;
+    background: #eef3fa;
+    border: 1px solid #c0d4ef;
+    border-radius: 3px;
+    padding: 1px 6px;
+    font-size: 9pt;
+    color: #1a3c6e;
+    font-weight: 600;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  /* ── Experience ── */
+  .job { margin-bottom: 14px; }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .job-title { font-weight: 700; font-size: 11pt; color: #1a1a1a; }
+  .job-date {
+    font-size: 10pt;
+    color: #555;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .job-company {
+    font-size: 10.5pt;
+    color: #1a3c6e;
+    font-weight: 600;
+    margin-bottom: 1px;
+  }
+  .job-location { font-size: 10pt; color: #777; font-style: italic; }
+
+  .project { margin-top: 6px; margin-bottom: 10px; padding-left: 4px; }
+  .project-name {
+    font-weight: 700;
+    font-size: 10.5pt;
+    color: #333;
+    margin-bottom: 2px;
+  }
+  .project-meta { font-size: 10pt; color: #666; margin-bottom: 2px; }
+  .project-desc { font-size: 10pt; color: #555; margin-bottom: 4px; font-style: italic; }
+
+  ul { padding-left: 18px; margin-top: 3px; }
+  li { font-size: 10.5pt; color: #3a3a3a; margin-bottom: 3px; line-height: 1.5; }
+  li::marker { color: #1a3c6e; }
+
+  /* ── Education ── */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .edu-degree { font-weight: 700; font-size: 11pt; color: #1a1a1a; }
+  .edu-year { font-size: 10pt; color: #555; font-weight: 600; }
+  .edu-school { font-size: 10.5pt; color: #1a3c6e; font-weight: 600; }
+
+  /* ── Print ── */
+  @media print {
+    body { padding: 0; }
+    .section { page-break-inside: avoid; }
+    .header::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="header">
+  <h1>DVSD Siva Prasad</h1>
+  <div class="title">Senior Cloud Engineer &nbsp;|&nbsp; .NET &amp; Azure Developer</div>
+  <div class="contact">
+    <span>📍 Hyderabad, India</span>
+    <span class="sep">|</span>
+    <span>💼 9+ Years Experience</span>
+  </div>
+</div>
+
+<!-- ═══════════ PROFESSIONAL SUMMARY ═══════════ -->
+<div class="section">
+  <div class="section-title">Professional Summary</div>
+  <p class="summary">
+    Senior Cloud Engineer with <b>9+ years</b> of experience designing and modernizing enterprise applications
+    on <b>.NET</b> and <b>Microsoft Azure</b> across Utilities and Retail domains. Delivered cloud-native web
+    solutions using <b>ASP.NET Core, Web API, Blazor/React, Azure Functions, Cosmos DB</b>, and
+    <b>Azure DevOps CI/CD</b>, with strong focus on reliability, testability (<b>85%+ unit test coverage</b>),
+    and production support readiness.
+  </p>
+</div>
+
+<!-- ═══════════ CORE SKILLS ═══════════ -->
+<div class="section">
+  <div class="section-title">Core Skills</div>
+  <div class="skill-row"><span class="skill-label">Languages:</span><span class="skill-value">C#, SQL</span></div>
+  <div class="skill-row"><span class="skill-label">Frameworks / UI:</span><span class="skill-value">.NET, ASP.NET Core MVC, Web API, Blazor, React, WPF, DevExpress</span></div>
+  <div class="skill-row"><span class="skill-label">Azure Services:</span><span class="skill-value">App Service, Azure Functions, API Management (APIM), Cosmos DB, Storage, Key Vault, Application Insights</span></div>
+  <div class="skill-row"><span class="skill-label">DevOps / Tools:</span><span class="skill-value">Azure DevOps (Pipelines/Boards), Git, Bitbucket, Postman, Swagger</span></div>
+  <div class="skill-row"><span class="skill-label">Architecture:</span><span class="skill-value">Microservices, CI/CD, TDD, Monitoring &amp; Diagnostics</span></div>
+</div>
+
+<!-- ═══════════ CERTIFICATIONS ═══════════ -->
+<div class="section">
+  <div class="section-title">Certifications</div>
+  <ul class="cert-list">
+    <li>Microsoft Certified: <b>Azure Developer Associate</b> <span class="cert-badge">AZ-204</span></li>
+    <li>Microsoft Certified: <b>Azure Fundamentals</b> <span class="cert-badge">AZ-900</span></li>
+  </ul>
+</div>
+
+<!-- ═══════════ PROFESSIONAL EXPERIENCE ═══════════ -->
+<div class="section">
+  <div class="section-title">Professional Experience</div>
+
+  <!-- ── JU Portal (PGE) ── -->
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Senior Cloud Engineer</span>
+      <span class="job-date">September 2022 – May 2026</span>
+    </div>
+    <div class="job-company">JU Portal Replacement — PGE (Pacific Gas &amp; Electric)</div>
+    <div class="project">
+      <ul>
+        <li>Built and enhanced a <b>Joint Use partner portal</b> using ASP.NET Core MVC and Web API to support permitting/violation workflows for utility partners.</li>
+        <li>Integrated enterprise system-of-record data from <b>Maximo via REST APIs</b> to enable validated, end-to-end business processes.</li>
+        <li>Improved code reliability and change confidence by implementing <b>NUnit tests with 85%+ unit test coverage</b> for core services.</li>
+        <li>Migrated database logic into <b>Azure Function Apps</b> to decouple heavy operations from the application layer and improve maintainability.</li>
+        <li>Implemented audit-ready observability using <b>Azure Application Insights</b> (logging, diagnostics) to accelerate incident triage and production support.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── MCOR (Meijer) ── -->
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Full Stack Developer</span>
+      <span class="job-date">January 2022 – June 2022</span>
+    </div>
+    <div class="job-company">MCOR — Meijer</div>
+    <div class="project">
+      <ul>
+        <li>Delivered <b>MVP features and ongoing enhancements</b> for a merchandising application used for daily store order review.</li>
+        <li>Resolved defects and improved user workflows through targeted <b>UI enhancements and backend updates</b> in a sprint-based delivery model.</li>
+        <li>Worked with <b>Azure services and Cosmos DB</b> and supported CI/CD pipelines to enable reliable releases.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── Alcohol Price Management ── -->
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Developer</span>
+      <span class="job-date">August 2021 – January 2022</span>
+    </div>
+    <div class="job-company">Alcohol Price Management</div>
+    <div class="project">
+      <ul>
+        <li>Enhanced a <b>WPF-based internal application</b> by building UI improvements with DevExpress components to improve usability and consistency.</li>
+        <li>Supported backend updates by contributing to <b>API and stored procedure enhancements</b> aligned with business changes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── MWS (Meijer) ── -->
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Full Stack Developer</span>
+      <span class="job-date">May 2018 – May 2021</span>
+    </div>
+    <div class="job-company">MWS — Meijer</div>
+    <div class="project">
+      <ul>
+        <li>Modernized <b>legacy PowerBuilder/C++ applications</b> into a .NET Blazor solution using DevExpress, improving maintainability and enabling web delivery.</li>
+        <li>Developed <b>Azure Functions, Web APIs, and Cosmos DB</b> integrations to support warehouse workflows across multiple operational modules.</li>
+        <li>Converted database procedures into <b>serverless functions</b> and integrated them with UI flows to reduce coupling and simplify deployments.</li>
+        <li>Supported <b>automated deployments</b> using Azure DevOps pipelines to improve release consistency.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════ EDUCATION ═══════════ -->
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="edu-row">
+    <span class="edu-degree">B.Tech in Electronics &amp; Communication Engineering</span>
+    <span class="edu-year">2016</span>
+  </div>
+  <div class="edu-school">JNTUK — 75%</div>
+</div>
+
+</body>
+</html>
